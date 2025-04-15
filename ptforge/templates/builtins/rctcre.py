@@ -61,7 +61,6 @@ class RCTCRETemplate(BasePromptTemplate):
                                          by the optimizer. If None, all sections provided with initial
                                          content default to optimizable.)
         """
-        print(optimizable_sections)
         super().__init__() # 调用基类初始化 (Call base class initializer)
 
         # 填充 _sections 字典 (Populate the _sections dictionary)

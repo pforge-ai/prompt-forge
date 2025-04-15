@@ -5,7 +5,7 @@ import os
 
 # --- 项目元数据 ---
 NAME = "ptforge"
-VERSION = "0.1.1"
+VERSION = "0.1.2"
 AUTHOR = "AlbertCui / pforge.ai"
 EMAIL = "albertzhouzhou@gmail.com"
 DESCRIPTION = "A framework for automated LLM prompt optimization."

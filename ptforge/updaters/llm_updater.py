@@ -287,7 +287,6 @@ class LLMBasedUpdater(BasePromptUpdater):
              modification_directions_json=modification_directions_json,
              optimizable_sections_list=optimizable_list_str # <--- 传入列表字符串 (Pass the list string)
         )
-        print(editor_prompt)
 
         try:
             logger.info("Calling OptimizerLLM (Editor Stage)...")
@@ -358,7 +357,6 @@ class LLMBasedUpdater(BasePromptUpdater):
 
         # 4. Apply Modifications (with final check)
         if final_modifications:
-            print("**"*100, final_modifications)
             new_template = copy.deepcopy(current_template)
             applied_count = 0
             original_optimizable_sections = set(current_template.get_optimizable_sections().keys())
