@@ -8,7 +8,7 @@ import httpx # 使用 httpx 进行同步和异步请求 (Use httpx for sync/asyn
 from typing import Any, Dict, List, Optional, Union
 
 # 导入基类 (Import base class)
-from prompt_forge.core.base import BaseLLMClient
+from ptforge.core.base import BaseLLMClient
 
 logger = logging.getLogger(__name__)
 

@@ -16,11 +16,11 @@ from .base import (
     UpdateGranularity,
 )
 
-from prompt_forge.templates.base_template import BasePromptTemplate
+from ptforge.templates.base_template import BasePromptTemplate
 
 from .config import OptimizationConfig
-from prompt_forge.evaluators.evaluator import Evaluator
-from prompt_forge.updaters.base_updater import BasePromptUpdater
+from ptforge.evaluators.evaluator import Evaluator
+from ptforge.updaters.base_updater import BasePromptUpdater
 
 # 设置日志记录器
 # Set up logger

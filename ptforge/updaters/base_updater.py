@@ -5,7 +5,7 @@ from typing import Any, Dict, List
 
 # 导入核心基础类型
 # Import core base types
-from prompt_forge.core.base import (
+from ptforge.core.base import (
     BasePromptTemplate,
     MetricResult,
     UpdateGranularity,

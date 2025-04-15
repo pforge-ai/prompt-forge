@@ -5,7 +5,7 @@ from typing import Any, Dict, List, Optional
 
 # 导入基类和结果类
 # Import base class and result class
-from prompt_forge.core.base import BaseMetric, MetricResult
+from ptforge.core.base import BaseMetric, MetricResult
 
 logger = logging.getLogger(__name__)
 

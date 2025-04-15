@@ -7,7 +7,7 @@ from typing import Any, Dict, List, Optional
 
 # 导入基类
 # Import base class
-from prompt_forge.core.base import BaseDataset
+from ptforge.core.base import BaseDataset
 
 logger = logging.getLogger(__name__)
 

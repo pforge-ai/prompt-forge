@@ -1,7 +1,7 @@
 # prompt_forge/llms/__init__.py
 
 # 导入基类 (Import base class)
-from prompt_forge.core.base import BaseLLMClient
+from ptforge.core.base import BaseLLMClient
 
 # 导入具体实现 (Import concrete implementations)
 from .clients import OpenAIClient

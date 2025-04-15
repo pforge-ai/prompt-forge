@@ -5,7 +5,7 @@ from typing import Any, Dict, List, Tuple
 
 # 导入 BaseMetric 和 MetricResult
 # Import BaseMetric and MetricResult
-from prompt_forge.core.base import BaseMetric, MetricResult
+from ptforge.core.base import BaseMetric, MetricResult
 
 # 设置日志记录器 (Set up logger)
 logger = logging.getLogger(__name__)

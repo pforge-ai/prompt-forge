@@ -36,7 +36,7 @@ except Exception as e:
 
 # 从 prompt_forge 库导入所需组件
 # Import necessary components from the prompt_forge library
-from prompt_forge import (
+from ptforge import (
     PromptOptimizer,
     OptimizationConfig,
     get_template,         # Template factory

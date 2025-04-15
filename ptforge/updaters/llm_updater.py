@@ -6,7 +6,7 @@ import copy
 from typing import Any, Dict, List, Optional, Tuple, TypedDict, cast
 
 # 导入核心基础类型和基类
-from prompt_forge.core.base import (
+from ptforge.core.base import (
     BaseLLMClient,
     BasePromptTemplate,
     MetricResult,

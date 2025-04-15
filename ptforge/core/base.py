@@ -16,7 +16,7 @@ from typing import (
     TypeVar,
 )
 
-from prompt_forge.templates.base_template import BasePromptTemplate
+from ptforge.templates.base_template import BasePromptTemplate
 
 
 # Type variable for concrete PromptTemplate implementations
