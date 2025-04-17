@@ -52,13 +52,7 @@ class APETemplate(BasePromptTemplate):
         if optimizable_sections is None:
             self._optimizable_sections: Set[str] = set(self._SUPPORTED_SECTIONS) # All sections optimizable by default
         else:
-            invalid_sections = optimizable_sections - self._SUPPORTED_SECTIONS
-            if invalid_sections:
-                logger.warning(
-                    f"Ignoring invalid section names provided in optimizable_sections: {invalid_sections}"
-                )
-            self._optimizable_sections = optimizable_sections & self._SUPPORTED_SECTIONS
-
+            self._optimizable_sections = optimizable_sections
         logger.debug(f"APETemplate initialized. Optimizable sections: {self._optimizable_sections}")
 
     # render 方法由基类提供 (render method is provided by the base class)

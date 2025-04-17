@@ -81,16 +81,6 @@ class RCTCRETemplate(BasePromptTemplate):
             }
         else:
             self._optimizable_sections = optimizable_sections
-        # else:
-        #     # Validate user-provided optimizable sections against supported sections
-        #     invalid_sections = optimizable_sections - self._SUPPORTED_SECTIONS
-        #     if invalid_sections:
-        #         logger.warning(
-        #             f"Ignoring invalid section names provided in optimizable_sections: {invalid_sections}"
-        #         )
-        #     # Use only valid and supported sections
-        #     self._optimizable_sections = optimizable_sections & self._SUPPORTED_SECTIONS
-
         logger.debug(f"RCTCRETemplate initialized. Optimizable sections: {self._optimizable_sections}")
 
     # render 方法由基类提供 (render method is provided by the base class)

@@ -72,12 +72,7 @@ class CRISPETemplate(BasePromptTemplate):
         if optimizable_sections is None:
             self._optimizable_sections: Set[str] = set(self._SUPPORTED_SECTIONS)
         else:
-            invalid_sections = optimizable_sections - self._SUPPORTED_SECTIONS
-            if invalid_sections:
-                logger.warning(
-                    f"Ignoring invalid section names provided in optimizable_sections: {invalid_sections}"
-                )
-            self._optimizable_sections = optimizable_sections & self._SUPPORTED_SECTIONS
+            self._optimizable_sections = optimizable_sections
 
         logger.debug(f"CRISPETemplate initialized. Optimizable sections: {self._optimizable_sections}")
 
