@@ -67,7 +67,7 @@ We greatly appreciate code contributions! Please follow these steps:
 
 ## Code of Conduct
 
-We are committed to providing a friendly, safe, and welcoming environment for all participants. Please ensure you read and adhere to our [Code of Conduct](CODE_OF_CONDUCT.md) (TODO: Create CODE_OF_CONDUCT.md file, often based on the Contributor Covenant template).
+We are committed to providing a friendly, safe, and welcoming environment for all participants. Please ensure you read and adhere to our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Questions
 
