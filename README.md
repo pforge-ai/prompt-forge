@@ -1,28 +1,43 @@
 # Prompt Forge
 
-[简体中文](README.zh.md) | **English**
+<div align="center">
+
+[![PyPI version](https://img.shields.io/pypi/v/ptforge.svg)](https://pypi.org/project/ptforge/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/ptforge.svg)](https://pypi.org/project/ptforge/)
+[![License](https://img.shields.io/github/license/pforge-ai/prompt-forge)](https://github.com/pforge-ai/prompt-forge/blob/main/LICENSE)
+
+**Automated LLM Prompt Optimization Framework**
+
+**English** | [简体中文](README.md)
+
+</div>
+
+## 📖 Introduction
 
 **Prompt Forge** is a Python framework designed for the automated optimization of prompts for large language models (LLMs). Inspired by the iterative training processes used in machine learning, Prompt Forge aims to systematically discover highly effective prompts based on evaluation metrics and datasets, particularly for scenarios involving API-only LLM access.
 
-This framework helps users move beyond manual prompt tuning, which can be time-consuming and prone to suboptimal results, especially on large datasets. By treating prompt structures as architectures and using an LLM-based optimizer, Prompt Forge iteratively refines prompts to maximize performance according to user-defined metrics.
+This framework helps users move beyond manual prompt tuning, which can be time-consuming and prone to suboptimal results. By treating prompt structures as architectures and using an LLM-based optimizer, Prompt Forge iteratively refines prompts to maximize performance according to user-defined metrics.
 
-## Features (Planned/Included)
+## ✨ Features
 
 * **Structured Prompt Templates:** Define prompts using composable sections (e.g., Role, Task, Constraints, Examples). Includes built-in templates (RCTCRE, APE, CRISPE, BROKE).
 * **Automated Optimization Loop:** Mimics ML training with epochs and batches.
-* **Two-Step LLM-Based Optimizer:** Utilizes a powerful LLM (OptimizerLLM) to first analyze feedback and generate optimization directions, then apply those directions to modify the prompt, using structured JSON communication.
+* **Two-Step LLM-Based Optimizer:** Utilizes a powerful LLM to first analyze feedback and generate optimization directions, then apply those directions to modify the prompt, using structured JSON communication.
 * **Configurable Update Granularity:** Control the scope and intensity of prompt changes (from micro-adjustments to full rewrites).
 * **Extensible Components:** Easily add custom datasets, LLM clients, evaluation metrics, prompt templates, and update strategies.
 * **Multi-Metric Evaluation:** Define and weight multiple metrics to guide optimization towards complex goals, returning detailed results.
 * **API-Only Focus:** Designed to work with LLMs accessible only via APIs.
 
-## Installation
+## 🔧 Installation
 
 ```bash
 pip install ptforge
 ```
 
-Quick Start
+## 🚀 Quick Start
+
+The following example demonstrates the basic usage of Prompt Forge:
+
 ```python
 import os
 import logging
@@ -86,8 +101,41 @@ except Exception as e:
     logging.error(f"Optimization failed: {e}", exc_info=True)
 ```
 
-## Contributing
-Contributions are welcome! Please refer to the contributing guidelines.
+## 🏗️ Architecture
 
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+Prompt Forge is built around these core components:
+
+- **PromptOptimizer**: Core class that orchestrates the optimization process
+- **PromptTemplate**: Template classes that provide structured representation of prompts
+- **LLMClient**: Interface for interacting with target language models
+- **Dataset**: Provides training data
+- **Evaluator**: Assesses the quality of generated outputs
+- **PromptUpdater**: Proposes template modifications based on evaluation results
+- **OptimizationConfig**: Controls the optimization process
+
+## 🧩 Built-in Templates
+
+Prompt Forge provides multiple built-in prompt templates:
+
+- **RCTCRE**: Role-Context-Task-Constraints-ResponseFormat-Examples
+- **APE**: Action-Purpose-Expect
+- **CRISPE**: Capacity/Role-Insight-Statement-Personality-Experiment
+- **BROKE**: Background-Role-Objectives-KeyResults-Evolve
+
+## 📚 Detailed Documentation
+
+For more detailed documentation and examples, please visit our [GitHub repository](https://github.com/pforge-ai/prompt-forge).
+
+## 🤝 Contributing
+
+Contributions are welcome! Please refer to the [contributing guidelines](CONTRIBUTING.md) for more information.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+  <sub>Built with ❤️ by <a href="https://github.com/pforge-ai">pforge.ai</a></sub>
+</div>
