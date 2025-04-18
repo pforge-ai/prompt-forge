@@ -8,7 +8,7 @@
 
 **自动化 LLM 提示词优化框架**
 
-[English](README.en.md) | **简体中文**
+[English](README.md) | **简体中文**
 
 </div>
 
