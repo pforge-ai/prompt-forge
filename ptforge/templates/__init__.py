@@ -12,6 +12,9 @@ from .builtins.broke import BROKETemplate
 # 导入工厂函数 (Import factory function)
 from .factory import get_template
 
+# 导入 ActionSpace
+from .action_space import ActionSpace, ActionType, StructuredAction
+
 # 定义公开接口 (Define public interface)
 __all__ = [
     "BasePromptTemplate",
@@ -20,5 +23,8 @@ __all__ = [
     "CRISPETemplate",
     "BROKETemplate",
     "get_template",
+    "ActionSpace",
+    "ActionType",
+    "StructuredAction"
 ]
 

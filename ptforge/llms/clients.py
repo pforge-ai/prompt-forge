@@ -10,12 +10,14 @@ from typing import Any, Dict, List, Optional, Union
 # 导入基类 (Import base class)
 from ptforge.core.base import BaseLLMClient
 
+logging.getLogger("httpx").setLevel(logging.WARNING)
+
 logger = logging.getLogger(__name__)
 
 # 默认 OpenAI API 地址 (Default OpenAI API endpoint)
 DEFAULT_OPENAI_API_BASE = "https://api.openai.com/v1"
 # 默认模型 (Default model)
-DEFAULT_OPENAI_MODEL = "gpt-3.5-turbo" # Or newer models like gpt-4o-mini, gpt-4o
+DEFAULT_OPENAI_MODEL = "gpt-4.1-2025-04-14"
 
 class OpenAIClient(BaseLLMClient):
     """
@@ -53,7 +55,6 @@ class OpenAIClient(BaseLLMClient):
             max_concurrent_requests: 异步批量请求时的最大并发数。
                                      (Maximum concurrent requests for asynchronous batch processing.)
         """
-        # ... (Initialization logic remains the same) ...
         if api_key is None:
             api_key = os.environ.get("OPENAI_API_KEY")
         if not api_key:
@@ -188,8 +189,6 @@ class OpenAIClient(BaseLLMClient):
              return ""
 
 
-    # --- BaseLLMClient Interface Implementation ---
-
     def generate(self, prompt: str, **kwargs) -> str:
         """同步生成单个响应。 (Synchronously generates a single response.)"""
         logger.debug(f"Generating sync completion for model '{self.model}'...")
@@ -212,8 +211,6 @@ class OpenAIClient(BaseLLMClient):
             logger.error(f"Async generation failed: {e}", exc_info=True)
             raise
 
-    # --- 修改 generate_batch ---
-    # --- Modify generate_batch ---
     def generate_batch(self, prompts: List[str], **kwargs) -> List[str]:
         """
         同步生成批量响应 (通过串行调用 generate 实现)。
